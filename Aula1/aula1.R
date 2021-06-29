@@ -1,9 +1,9 @@
-#O tidyverse
+#--- O tidyverse ----
 #Comando para instalar: install.packages("tidyverse")
 
 library(tidyverse)
 
-#pacote tibble
+#------ pacote tibble -----
 #dataset iris
 
 iris_df <- iris
@@ -45,7 +45,7 @@ skimr::skim(iris_tibble)
 #dependências
 
 
-#leitura de dados (pacotes readr e readxl)
+#----- leitura de dados (pacotes readr e readxl) ------
 # Funções de importação: read_*()
 
 #read_delim
@@ -122,9 +122,9 @@ iris6 <- read_excel(path = "iris_xlsx.xlsx", sheet = 1, col_names = TRUE,
                     col_types = NULL, na = c("","NA","SI"), skip = 0)
 
 
-#Manipuação de dados (pacotes dplyr e tidyr)
+#------ Manipuação de dados (pacotes dplyr e tidyr) ----
 
-#Operador %>%
+#----- Operador %>% -----
 
 #Exemplo: vamos calcular a raiz quadrada da soma dos valores 
 #de 1 a 4 e arredondar o valor da raiz para duas casas decimais.
