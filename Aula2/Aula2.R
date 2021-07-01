@@ -189,7 +189,7 @@ dados_long <- dados_wide %>%
   pivot_longer(cols = c("2019","2020"),
                names_to = "Ano",
                values_to = "Populacao",
-               names_transform = list("Ano" = as.integer())
+               names_transform = list("Ano" = as.integer)
   )
 dados_long
 
