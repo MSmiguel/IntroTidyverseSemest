@@ -639,3 +639,13 @@ ggpairs(dados, columns = c(5,7), mapping = aes(color=Grau_de_Instruçao))
 #melhorando a visualização
 ggpairs(dados, columns = c(5,7), mapping = aes(color=Grau_de_Instruçao, 
                                                alpha = 0.5))
+
+#visualições interativas com o Plotly
+#install.packages("plotly")
+library(plotly)
+graf <- ggplot(data = iris, mapping =  aes(x = reorder(Species, Sepal.Length, 
+                                               FUN = mean),
+                                   y = Sepal.Length, fill = Species)) +
+  geom_boxplot(show.legend = F) +
+  stat_summary(fun=mean, geom="point", size=2, color="red", show.legend = F)
+ggplotly(graf)
